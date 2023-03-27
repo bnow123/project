@@ -36,3 +36,11 @@ h = 3
 obwod = a + b + c + d
 pole = ((a + b) * h)/2
 print("Obwod trapezu wynosi "+ str(obwod) + ",a pole trapezu wynosi " + str(pole) + ".")
+
+# romb
+
+a = 4
+h = 3
+obwod =  4 * a
+pole = a * h
+print("Obwod rombu wynosi " + str(obwod) + ", a pole " + str(pole) + ".")
