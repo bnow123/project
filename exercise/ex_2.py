@@ -1,4 +1,5 @@
 # kwadrat
+import math
 
 a = 10
 obwod = a * 4
@@ -15,3 +16,12 @@ obwod = a * 2 + b * 2
 pole = a * b
 
 print("Obwod prostokata wynosi " + str(obwod) + ",a pole prostokata wynosi " + str(pole) + ".")
+
+# kolo
+
+r = 5
+pi = math.pi
+obwod = 2 * pi * r
+pole = pi * r * r
+
+print("Obwod kola wynosi "+ str(obwod) + ",a pole kola wynosi " + str(pole) + ".")
