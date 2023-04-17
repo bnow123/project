@@ -1,3 +1,3 @@
 hello = "Hello"
 student = "Beata"
-print(str(print(hello + " " + student)))
+str(print(hello + " " + student))
