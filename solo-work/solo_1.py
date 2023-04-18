@@ -9,3 +9,6 @@ print("{} {}".format(hello, student_name))
 students = ["Bajka", "Bójka", "Brawurka", "Mojojojo"]
 liczba_studentow = len(students)
 print("Liczba studentów wynosi: {} ".format(liczba_studentow))
+# zadanie 1.4
+for i in range(4):
+    print("Hello ", students[i])
