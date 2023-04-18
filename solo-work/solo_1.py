@@ -30,7 +30,21 @@ print("Liczba nawiasow otwierajacych wynosi: {}".format(liczba_nawiasow_otwieraj
 students = ["Anna Szczesny", "Tomasz Nijaki", "Barbara Kowalska", "Jan Niezbedny"]
 students_sorted = sorted(students)
 print("Alfabetyczna lista studentow:")
+# oczekiwany rezultat
+# Anna Szczesny
+# Barbara Kowalska
+# Jan Niezbedny
+# Tomasz Nijaki
 for i in range(len(students)):
           print(students_sorted[i])
-
+# zadanie 1.8
+students_surnamesorted = sorted(students, key=lambda x: x.split(" ")[-1])
+print("Alfabetyczna lista studentow wg nazwiska:")
+# oczekiwany rezultat:
+# Barbara Kowalska
+# Jan Niezbedny
+# Tomasz Nijaki
+# Anna Szczesny
+for i in range(len(students)):
+    print(students_surnamesorted[i])
 
