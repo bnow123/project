@@ -1,4 +1,4 @@
 hello = "Hello"
 student = "Beata"
-print(hello + " " + student)
+print("{} {}".format(hello, student))
 
