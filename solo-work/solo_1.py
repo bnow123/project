@@ -1,3 +1,4 @@
 hello = "Hello"
 student = "Beata"
-str(print(hello + " " + student))
+print(hello + " " + student)
+
