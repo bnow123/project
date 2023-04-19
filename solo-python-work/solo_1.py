@@ -19,4 +19,13 @@ print("Liczba studentów wynosi: {} ".format(liczba_studentow))
 
 for i in range(4):
     print("Hello ", students[i])
-    
+
+# zadanie 1.5
+
+liczba = 5
+potega = 3
+
+wynik = liczba ** potega
+# oczekiwany rezultat:
+# Wynik wynosi: 125
+print("Wynik wynosi: {}".format(wynik))
