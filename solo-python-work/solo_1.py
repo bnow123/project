@@ -70,17 +70,23 @@ liczba_n = len([element for element in students if "N" in element])
 print("Liczba osob, ktorych nazwiska zaczynaja sie na N: ", liczba_n)
 
 # zadanie 1.10
+
+
 def wektory(list_a, list_b):
     result = []
     for item_a, item_b in zip(list_a, list_b):
         result.append(item_b - item_a)
     return result
+
+
 def rownosc_wektorow(list_a, list_b):
     result = True
     for item_a, item_b in zip(list_a, list_b):
         if item_a != item_b:
             result = False
     return result
+
+
 wykres_1 = [[2, 4], [4, 4], [6, 4]]
 wykres_2 = [[2, 3], [4, 4], [6, 5]]
 wykres_3 = [[2, 3], [4, 3], [5, 4]]
