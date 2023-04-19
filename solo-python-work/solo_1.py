@@ -62,3 +62,9 @@ print("Alfabetyczna lista studentow wg nazwiska:")
 # Anna Szczesny
 for i in range(len(students)):
     print(students_surnamesorted[i])
+
+# zadanie 1.9
+
+students = ["Anna Szczesny", "Tomasz Nijaki", "Barbara Kowalska", "Jan Niezbedny"]
+liczba_n = len([element for element in students if "N" in element])
+print("Liczba osob, ktorych nazwiska zaczynaja sie na N: ", liczba_n)
