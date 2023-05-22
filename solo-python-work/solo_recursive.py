@@ -238,7 +238,6 @@ n = 20
 fib_sequence = fibonacci_recursive(n)
 print(fib_sequence)
 # funkcja sudoku
-# Przykładowa plansza Sudoku do rozwiązania
 board = [
     [0, 0, 0, 8, 0, 0, 0, 0, 9],
     [0, 1, 9, 0, 0, 5, 8, 3, 0],
@@ -250,15 +249,10 @@ board = [
     [0, 3, 0, 0, 7, 0, 0, 8, 0],
     [9, 0, 4, 5, 0, 0, 0, 0, 1]
 ]
-
-result = solve_sudoku(board)
-
-if result == "Done":
-    print("Rozwiązanie Sudoku:")
-    for row in board:
-        print(row)
-else:
-    print("Nie znaleziono rozwiązania dla Sudoku.")
+solve_sudoku(board)
+print("Rozwiązanie Sudoku to:")
+for row in board:
+    print(row)
 # poprawne rozwiązanie jakie powinno wyjść:
 # [2, 5, 6, 8, 3, 7, 1, 4, 9]
 # [7, 1, 9, 2, 4, 5, 8, 3, 6]
@@ -283,11 +277,7 @@ board = [
     [0, 0, 0, 0, 8, 0, 0, 7, 9]
 ]
 
-result = solve_sudoku(board)
-
-if result == "Done":
-    print("Rozwiązanie Sudoku:")
-    for row in board:
-        print(row)
-else:
-    print("Nie znaleziono rozwiązania dla Sudoku.")
+solve_sudoku(board)
+print("Rozwiązanie Sudoku to:")
+for row in board:
+    print(row)
