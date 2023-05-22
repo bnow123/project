@@ -6,10 +6,12 @@
 # the list is not empty so 3+ []->
 # the list is empty so return 0
 def sum_list(l):
-    if not l:
+    if len(l) == 0:
         return 0
     else:
-        return l[0] + sum_list(l[1:])
+        data = l[0]
+        l.pop(0)
+        return data + sum_list(l)
 
 # FUNKCJA SILNIA
 # function n!
@@ -197,4 +199,7 @@ def find_empty_cell(board):
     return -1, -1
 
 
-# Test
+# Testy
+l = [1, 2, 3, 4, 5]
+sum_result = sum_list(l)
+print(sum_result)
