@@ -208,11 +208,19 @@ def find_empty_cell(board):
 # funkcja sum_list
 l = [1, 2, 3, 4, 5]
 sum_result = sum_list(l)
-print(sum_result)
+print (sum_result)
 # test 2 dla tej funkcji
 k = [10, 18, 20, 30, 43]
 sum_result = sum_list(k)
 print(sum_result)
+# test dla silni
+n = 5
+result = silnia(n)
+print(result)
+# test 2
+n = 10
+result = silnia(n)
+print(result)
 # funkcja find_max
 array = [3, 9, 2, 6, 5, 1, 8]
 max_value = find_max(array)
