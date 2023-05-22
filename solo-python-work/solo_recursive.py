@@ -205,40 +205,40 @@ def find_empty_cell(board):
 
 # Testy
 # funkcja sum_list
-l = [1, 2, 3, 4, 5]
-sum_result = sum_list(l)
+k = [1, 2, 3, 4, 5]
+sum_result = sum_list(k)
 print(sum_result)
 # test 2 dla tej funkcji
 k = [10, 18, 20, 30, 43]
 sum_result = sum_list(k)
 print(sum_result)
 # test dla silni
-n = 5
-result = silnia(n)
+a = 5
+result = silnia(a)
 print(result)
 # test 2
-n = 10
-result = silnia(n)
+a = 10
+result = silnia(a)
 print(result)
 # funkcja find_max
-array = [3, 9, 2, 6, 5, 1, 8]
-max_value = find_max(array)
+array1 = [3, 9, 2, 6, 5, 1, 8]
+max_value = find_max(array1)
 print(max_value)
 # test 2
-array = [pow(9, 3), pow(8, 4), pow(3, 2), pow(4, 3)]
-max_value = find_max(array)
+array2 = [pow(9, 3), pow(8, 4), pow(3, 2), pow(4, 3)]
+max_value = find_max(array2)
 print(max_value)
 
 # funkcja ciąg Fibonacciego
-n = 10
-fib_sequence = fibonacci_recursive(n)
+m = 10
+fib_sequence = fibonacci_recursive(m)
 print(fib_sequence)
 # test 2
-n = 20
-fib_sequence = fibonacci_recursive(n)
+m = 20
+fib_sequence = fibonacci_recursive(m)
 print(fib_sequence)
 # funkcja sudoku
-board = [
+tablica = [
     [0, 0, 0, 8, 0, 0, 0, 0, 9],
     [0, 1, 9, 0, 0, 5, 8, 3, 0],
     [0, 4, 3, 0, 1, 0, 0, 0, 7],
@@ -249,9 +249,9 @@ board = [
     [0, 3, 0, 0, 7, 0, 0, 8, 0],
     [9, 0, 4, 5, 0, 0, 0, 0, 1]
 ]
-solve_sudoku(board)
+solve_sudoku(tablica)
 print("Rozwiązanie Sudoku to:")
-for row in board:
+for row in tablica:
     print(row)
 # poprawne rozwiązanie jakie powinno wyjść:
 # [2, 5, 6, 8, 3, 7, 1, 4, 9]
@@ -265,7 +265,7 @@ for row in board:
 # [9, 2, 4, 5, 8, 3, 7, 6, 1]
 
 # test 2
-board = [
+tablica = [
     [5, 3, 0, 0, 7, 0, 0, 0, 0],
     [6, 0, 0, 1, 9, 5, 0, 0, 0],
     [0, 9, 8, 0, 0, 0, 0, 6, 0],
@@ -277,7 +277,7 @@ board = [
     [0, 0, 0, 0, 8, 0, 0, 7, 9]
 ]
 
-solve_sudoku(board)
+solve_sudoku(tablica)
 print("Rozwiązanie Sudoku to:")
-for row in board:
+for row in tablica:
     print(row)
