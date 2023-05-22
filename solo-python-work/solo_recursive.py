@@ -37,14 +37,19 @@ def silnia(n):
 # pierwsza, jeśli tablica jest pusta no to wartość None, no bo nic tam nie ma
 # druga, gdy długość tablicy wynosi 1 no to zwracamy pierwszy element w języku Python oznaczony jako element 0.
 # trzecia,
-def znajdz_max(array):
+def find_max(array):
     if len(array) == 0:
         return None
     else:
         if len(array) == 1:
             return array[0]
+        # znajdź maksymalną wartość
+        # w podtablicy bez pierwszego elementu,
+        # nie używamy tu pop bo pop usuwa pierwszy element na miejscu,
+        # moglibysmy zrbic array.copy().pop(0) kopiując tablicę
         else:
-            sub_max = znajdz_max(array[1:])  # znajdź maksymalną wartość w podtablicy bez pierwszego elementu
+            sub_max = find_max(array[1:])
+
         return array[0] if array[0] > sub_max else sub_max
 
 
@@ -200,6 +205,19 @@ def find_empty_cell(board):
 
 
 # Testy
+# funkcja sum_list
 l = [1, 2, 3, 4, 5]
 sum_result = sum_list(l)
 print(sum_result)
+# test 2 dla tej funkcji
+k = [10, 18, 20, 30, 43]
+sum_result = sum_list(k)
+print(sum_result)
+# funkcja find_max
+array = [3, 9, 2, 6, 5, 1, 8]
+max_value = find_max(array)
+print(max_value)
+# test 2
+array = [ pow(9, 3), pow(8, 4), pow(3, 2), pow(4, 3)]
+max_value = find_max(array)
+print(max_value)
