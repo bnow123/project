@@ -76,7 +76,7 @@ def find_max(array):
 def fibonacci_recursive(n):
     if n <= 0:
         return []
-    elif n == 1:
+    elif n == 1:            # elif zamiast else, później if
         return [0]
     elif n == 2:
         return [0, 1]
@@ -125,14 +125,13 @@ def solve_sudoku(board):
             board[row][col] = num
 
             # Kontynuuj rekurencyjnie, jeśli rozwiązanie jest możliwe
-            if solve_sudoku(board):
-                return True
+            if solve_sudoku(board) == "Done":
+                return "Done"
 
-            # Jeśli rozwiązanie jest niewłaściwe, cofnij i spróbuj inną liczbę, czyli dajemy narazie 0 bo pusta komórka
+            # Jeśli rozwiązanie jest niewłaściwe, cofnij i spróbuj inną liczbę
             board[row][col] = 0
 
-    # Jeśli żadna liczba nie pasuje, wróć do poprzedniego poziomu rekurencji, czyli zakładamy,
-    # że możemy się pomylić i wtedy wracamy krok wstecz
+    # Jeśli żadna liczba nie pasuje, zwróć False
     return False
 
 
@@ -208,7 +207,7 @@ def find_empty_cell(board):
 # funkcja sum_list
 l = [1, 2, 3, 4, 5]
 sum_result = sum_list(l)
-print (sum_result)
+print(sum_result)
 # test 2 dla tej funkcji
 k = [10, 18, 20, 30, 43]
 sum_result = sum_list(k)
@@ -226,6 +225,69 @@ array = [3, 9, 2, 6, 5, 1, 8]
 max_value = find_max(array)
 print(max_value)
 # test 2
-array = [ pow(9, 3), pow(8, 4), pow(3, 2), pow(4, 3)]
+array = [pow(9, 3), pow(8, 4), pow(3, 2), pow(4, 3)]
 max_value = find_max(array)
 print(max_value)
+
+# funkcja ciąg Fibonacciego
+n = 10
+fib_sequence = fibonacci_recursive(n)
+print(fib_sequence)
+# test 2
+n = 20
+fib_sequence = fibonacci_recursive(n)
+print(fib_sequence)
+# funkcja sudoku
+# Przykładowa plansza Sudoku do rozwiązania
+board = [
+    [0, 0, 0, 8, 0, 0, 0, 0, 9],
+    [0, 1, 9, 0, 0, 5, 8, 3, 0],
+    [0, 4, 3, 0, 1, 0, 0, 0, 7],
+    [4, 0, 0, 1, 5, 0, 0, 0, 3],
+    [0, 0, 2, 7, 0, 4, 0, 1, 0],
+    [0, 8, 0, 0, 9, 0, 6, 0, 0],
+    [0, 7, 0, 0, 0, 6, 3, 0, 0],
+    [0, 3, 0, 0, 7, 0, 0, 8, 0],
+    [9, 0, 4, 5, 0, 0, 0, 0, 1]
+]
+
+result = solve_sudoku(board)
+
+if result == "Done":
+    print("Rozwiązanie Sudoku:")
+    for row in board:
+        print(row)
+else:
+    print("Nie znaleziono rozwiązania dla Sudoku.")
+# poprawne rozwiązanie jakie powinno wyjść:
+# [2, 5, 6, 8, 3, 7, 1, 4, 9]
+# [7, 1, 9, 2, 4, 5, 8, 3, 6]
+# [8, 4, 3, 6, 1, 9, 2, 5, 7]
+# [4, 6, 7, 1, 5, 8, 9, 2, 3]
+# [3, 9, 2, 7, 6, 4, 5, 1, 8]
+# [5, 8, 1, 3, 9, 2, 6, 7, 4]
+# [1, 7, 8, 4, 2, 6, 3, 9, 5]
+# [6, 3, 5, 9, 7, 1, 4, 8, 2]
+# [9, 2, 4, 5, 8, 3, 7, 6, 1]
+
+# test 2
+board = [
+    [5, 3, 0, 0, 7, 0, 0, 0, 0],
+    [6, 0, 0, 1, 9, 5, 0, 0, 0],
+    [0, 9, 8, 0, 0, 0, 0, 6, 0],
+    [8, 0, 0, 0, 6, 0, 0, 0, 3],
+    [4, 0, 0, 8, 0, 3, 0, 0, 1],
+    [7, 0, 0, 0, 2, 0, 0, 0, 6],
+    [0, 6, 0, 0, 0, 0, 2, 8, 0],
+    [0, 0, 0, 4, 1, 9, 0, 0, 5],
+    [0, 0, 0, 0, 8, 0, 0, 7, 9]
+]
+
+result = solve_sudoku(board)
+
+if result == "Done":
+    print("Rozwiązanie Sudoku:")
+    for row in board:
+        print(row)
+else:
+    print("Nie znaleziono rozwiązania dla Sudoku.")
