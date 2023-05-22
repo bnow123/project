@@ -1,3 +1,4 @@
+# FUNKCJA SUM_LIST
 # function sum_list l -> function which add elements recursively
 # is l empty? Yes->0 No-> [0] + the rest -> sum_list(rest)
 # example list[1,2,3] ->the list is not empty,
@@ -10,7 +11,7 @@ def sum_list(l):
     else:
         return l[0] + sum_list(l[1:])
 
-
+# FUNKCJA SILNIA
 # function n!
 # function silnia -> if n == 0 return 1
 # because 0! == 1 for n=/=0 n * silnia (n-1)
@@ -20,6 +21,7 @@ def sum_list(l):
 # and if not we count n * silnia(n-1)
 # silnia(n-1) works the same way if n-1 =/= 0 we count (n-1)* silnia(n-2) etc.
 
+
 def silnia(n):
     if n == 0:
         return 1
@@ -27,12 +29,21 @@ def silnia(n):
         return n * silnia(n - 1)
 
 
-# find_max
-def find_max(list2):
-    if len(list2) == 1:
-        return list2[0]
+# FIND_MAX
+# za pomocą rekursji znajdujemy największą wartość z tablicy, nie korzystamy z wbudowanej funkcji max(),
+# funkcja działa w ten sposób, że zakładamy 3 ścieżki:
+# pierwsza, jeśli tablica jest pusta no to wartość None, no bo nic tam nie ma
+# druga, gdy długość tablicy wynosi 1 no to zwracamy pierwszy element w języku Python oznaczony jako element 0.
+# trzecia,
+def znajdz_max(array):
+    if len(array) == 0:
+        return None
     else:
-        return max(list2[0], find_max(list2[1:]))
+        if len(array) == 1:
+            return array[0]
+        else:
+            sub_max = znajdz_max(array[1:])  # znajdź maksymalną wartość w podtablicy bez pierwszego elementu
+        return array[0] if array[0] > sub_max else sub_max
 
 
 # Fibonacci
