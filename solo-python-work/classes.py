@@ -44,3 +44,18 @@ class Kwadrat:
 moj_kwadrat = Kwadrat(9)
 print("Mój kwadrat ma pole: " + str(moj_kwadrat.pole()) + ", a jego obwod to: " + str(moj_kwadrat.obwod()))
 
+class Prostokat:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+
+    def pole(self):
+        return self.a * self.b
+
+    def obwod(self):
+        return 2 * self.a + 2 * self.b
+
+
+moj_prosto = Prostokat(4, 8)
+print("Mój prostokat ma pole: " + str(moj_prosto.pole()) + ", a jego obwod to: " + str(moj_prosto.obwod()))
+
