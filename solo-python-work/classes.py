@@ -28,3 +28,19 @@ class Kolo:
 moje_kolo = Kolo(10)
 print(moje_kolo.pole())
 print(moje_kolo.obwod())
+
+
+class Kwadrat:
+    def __init__(self, a):
+        self.a = a
+
+    def obwod(self):
+        return 4 * self.a
+
+    def pole(self):
+        return self.a * self.a
+
+
+moj_kwadrat = Kwadrat(9)
+print("Mój kwadrat ma pole: " + str(moj_kwadrat.pole()) + ", a jego obwod to: " + str(moj_kwadrat.obwod()))
+
