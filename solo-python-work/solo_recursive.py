@@ -202,5 +202,82 @@ def find_empty_cell(board):
                 return row, col
     return -1, -1
 
+# Testy
+# funkcja sum_list
+k = [1, 2, 3, 4, 5]
+sum_result = sum_list(k)
+print(sum_result)
+# test 2 dla tej funkcji
+k = [10, 18, 20, 30, 43]
+sum_result = sum_list(k)
+print(sum_result)
+# test dla silni
+a = 5
+result = silnia(a)
+print(result)
+# test 2
+a = 10
+result = silnia(a)
+print(result)
+# funkcja find_max
+array1 = [3, 9, 2, 6, 5, 1, 8]
+max_value = find_max(array1)
+print(max_value)
+# test 2
+array2 = [pow(9, 3), pow(8, 4), pow(3, 2), pow(4, 3)]
+max_value = find_max(array2)
+print(max_value)
 
+# funkcja ciąg Fibonacciego
+m = 10
+fib_sequence = fibonacci_recursive(m)
+print(fib_sequence)
+# test 2
+m = 20
+fib_sequence = fibonacci_recursive(m)
+print(fib_sequence)
+# funkcja sudoku
+tablica = [
+    [0, 0, 0, 8, 0, 0, 0, 0, 9],
+    [0, 1, 9, 0, 0, 5, 8, 3, 0],
+    [0, 4, 3, 0, 1, 0, 0, 0, 7],
+    [4, 0, 0, 1, 5, 0, 0, 0, 3],
+    [0, 0, 2, 7, 0, 4, 0, 1, 0],
+    [0, 8, 0, 0, 9, 0, 6, 0, 0],
+    [0, 7, 0, 0, 0, 6, 3, 0, 0],
+    [0, 3, 0, 0, 7, 0, 0, 8, 0],
+    [9, 0, 4, 5, 0, 0, 0, 0, 1]
+]
+solve_sudoku(tablica)
+print("Rozwiązanie Sudoku to:")
+for row in tablica:
+    print(row)
+# poprawne rozwiązanie jakie powinno wyjść:
+# [2, 5, 6, 8, 3, 7, 1, 4, 9]
+# [7, 1, 9, 2, 4, 5, 8, 3, 6]
+# [8, 4, 3, 6, 1, 9, 2, 5, 7]
+# [4, 6, 7, 1, 5, 8, 9, 2, 3]
+# [3, 9, 2, 7, 6, 4, 5, 1, 8]
+# [5, 8, 1, 3, 9, 2, 6, 7, 4]
+# [1, 7, 8, 4, 2, 6, 3, 9, 5]
+# [6, 3, 5, 9, 7, 1, 4, 8, 2]
+# [9, 2, 4, 5, 8, 3, 7, 6, 1]
+
+# test 2
+tablica = [
+    [5, 3, 0, 0, 7, 0, 0, 0, 0],
+    [6, 0, 0, 1, 9, 5, 0, 0, 0],
+    [0, 9, 8, 0, 0, 0, 0, 6, 0],
+    [8, 0, 0, 0, 6, 0, 0, 0, 3],
+    [4, 0, 0, 8, 0, 3, 0, 0, 1],
+    [7, 0, 0, 0, 2, 0, 0, 0, 6],
+    [0, 6, 0, 0, 0, 0, 2, 8, 0],
+    [0, 0, 0, 4, 1, 9, 0, 0, 5],
+    [0, 0, 0, 0, 8, 0, 0, 7, 9]
+]
+
+solve_sudoku(tablica)
+print("Rozwiązanie Sudoku to:")
+for row in tablica:
+    print(row)
 
