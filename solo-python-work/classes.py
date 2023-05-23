@@ -14,6 +14,8 @@ class Trojkat:
 
 moj_troj = Trojkat(5, 4, 3, 5.3)
 print(moj_troj.obwod())
+
+
 class Kolo:
     def __init__(self, r):
         self.r = r
@@ -43,6 +45,7 @@ class Kwadrat:
 
 moj_kwadrat = Kwadrat(9)
 print("Mój kwadrat ma pole: " + str(moj_kwadrat.pole()) + ", a jego obwod to: " + str(moj_kwadrat.obwod()))
+
 
 class Prostokat:
     def __init__(self, a, b):
@@ -78,6 +81,7 @@ class Trapez:
 moj_trapez = Trapez(1, 2, 5, 4, 8)
 print("Mój trapez ma pole " + str(moj_trapez.pole()) + ", a jego obwod to " + str(moj_trapez.obwod()))
 
+
 class Student:
     def __init__(self, imie, nazwisko, index):
         self.imie = imie
@@ -105,3 +109,69 @@ student_Beata.dodaj_ocene(4)
 print(student_Beata)
 print(student_Beata.zwroc_srednia())
 
+# class dla Pizzy- zawiera 9 zmiennych
+
+
+class Pizza:
+    def __init__(self, size, crust_type, toppings,
+                 cheese_type, sauce_type, extra_cheese,
+                 extra_toppings, delivery_address, special_instructions):
+        self.size = size
+        self.crust_type = crust_type
+        self.toppings = toppings
+        self.cheese_type = cheese_type
+        self.sauce_type = sauce_type
+        self.extra_cheese = extra_cheese
+        self.extra_toppings = extra_toppings
+        self.delivery_address = delivery_address
+        self.special_instructions = special_instructions
+
+    def __str__(self):
+        toppings_str = ', '.join(self.toppings)
+        extra_toppings_str = ', '.join(self.extra_toppings)
+        extra_cheese_str = "Yes" if self.extra_cheese else "No"
+
+        pizza_info = f"""
+        Size: {self.size}
+        Crust Type: {self.crust_type}
+        Toppings: {toppings_str}
+        Cheese Type: {self.cheese_type}
+        Sauce Type: {self.sauce_type}
+        Extra Cheese: {extra_cheese_str}
+        Extra Toppings: {extra_toppings_str}
+        Delivery Address: {self.delivery_address}
+        Special Instructions: {self.special_instructions}
+        """
+
+        return pizza_info.strip()
+
+    def add_topping(self, topping):
+        self.toppings.append(topping)
+
+    def calculate_price(self):
+        base_price = 10  # Base price for a small pizza
+        if self.size == "Medium":
+            base_price = 12
+        elif self.size == "Large":
+            base_price = 14
+
+        total_price = base_price
+
+        if self.extra_cheese:
+            total_price += 2
+
+        total_price += len(self.extra_toppings) * 1.5
+
+        return total_price
+
+
+# Test
+pizza = Pizza("Large", "Thin Crust",
+              ["Pieczarki", "Pepperoni"], "Ser Mozzarella", "Pomidor",
+              False, ["Oliwki"], "Najlepsza ulica 6/5",
+              "Zostaw przed drzwiami")
+pizza.add_topping("Onions")
+price = pizza.calculate_price()
+
+print(pizza)
+print("Price:", price)
