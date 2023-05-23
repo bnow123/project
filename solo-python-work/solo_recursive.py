@@ -203,7 +203,7 @@ def find_empty_cell(board):
     return -1, -1
 
 # Testy
-# funkcja sum_list
+# testy dla funkcji sum_list
 k = [1, 2, 3, 4, 5]
 sum_result = sum_list(k)
 print(sum_result)
@@ -219,7 +219,7 @@ print(result)
 a = 10
 result = silnia(a)
 print(result)
-# funkcja find_max
+# testy dla funkcji find_max
 array1 = [3, 9, 2, 6, 5, 1, 8]
 max_value = find_max(array1)
 print(max_value)
@@ -280,4 +280,13 @@ solve_sudoku(tablica)
 print("Rozwiązanie Sudoku to:")
 for row in tablica:
     print(row)
-
+# poprawne rozwiązanie jakie powinno wyjść:
+# [5, 3, 4, 6, 7, 8, 9, 1, 2]
+# [6, 7, 2, 1, 9, 5, 3, 4, 8]
+# [1, 9, 8, 3, 4, 2, 5, 6, 7]
+# [8, 5, 9, 7, 6, 1, 4, 2, 3]
+# [4, 2, 6, 8, 5, 3, 7, 9, 1]
+# [7, 1, 3, 9, 2, 4, 8, 5, 6]
+# [9, 6, 1, 5, 3, 7, 2, 8, 4]
+# [2, 8, 7, 4, 1, 9, 6, 3, 5]
+# [3, 4, 5, 2, 8, 6, 1, 7, 9]
