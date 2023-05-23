@@ -59,3 +59,23 @@ class Prostokat:
 moj_prosto = Prostokat(4, 8)
 print("Mój prostokat ma pole: " + str(moj_prosto.pole()) + ", a jego obwod to: " + str(moj_prosto.obwod()))
 
+
+class Trapez:
+    def __init__(self, a, b, c, d, h):
+        self.a = a
+        self.b = b
+        self.c = c
+        self.d = d
+        self.h = h
+
+    def pole(self):
+        return (self.a * self.h)/2
+
+    def obwod(self):
+        return self.a + self.b + self.c + self.d
+
+
+moj_trapez = Trapez(1, 2, 5, 4, 8)
+print("Mój trapez ma pole " + str(moj_trapez.pole()) + ", a jego obwod to " + str(moj_trapez.obwod()))
+
+
