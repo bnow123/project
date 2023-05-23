@@ -78,4 +78,30 @@ class Trapez:
 moj_trapez = Trapez(1, 2, 5, 4, 8)
 print("Mój trapez ma pole " + str(moj_trapez.pole()) + ", a jego obwod to " + str(moj_trapez.obwod()))
 
+class Student:
+    def __init__(self, imie, nazwisko, index):
+        self.imie = imie
+        self.nazwisko = nazwisko
+        self.index = index
+        self.oceny = []
+
+    def __str__(self):
+        return f"{self.imie} {self.nazwisko} {self.index}"
+
+    def __int__(self):
+        return 6
+
+    def dodaj_ocene(self, ocena):
+        self.oceny.append(ocena)
+
+    def zwroc_srednia(self):
+        return sum(self.oceny)/len(self.oceny)
+
+
+student_Beata = Student("Beata", "Nowicka", 121583)
+
+
+student_Beata.dodaj_ocene(4)
+print(student_Beata)
+print(student_Beata.zwroc_srednia())
 
