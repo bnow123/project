@@ -363,7 +363,40 @@ print(fib_sequence)
 m = 20
 fib_sequence = fibonacci_recursive(m)
 print(fib_sequence)
-# funkcja sudoku
+# funkcja sudoku 4 x 4
+tablica4x4 = [
+    [1, 0, 3, 4],
+    [4, 3, 2, 0],
+    [3, 0, 1, 0],
+    [2, 0, 0, 0]]
+solve_sudoku(tablica4x4)
+print("Rozwiązanie Sudoku 4x4 to:")
+for wiersz in tablica4x4:
+    print(wiersz)
+# powinno wyjść:
+# [1, 2, 3, 4]
+# [4, 3, 2, 1]
+# [3, 4, 1, 2]
+# [2, 1, 4, 3]
+
+# test2 dla sudoku 4x4
+tablica4x4_2 = [
+    [0, 0, 2, 0],
+    [1, 3, 0, 0],
+    [0, 0, 3, 4],
+    [2, 0, 0, 3]
+]
+solve_sudoku(tablica4x4_2)
+print("Rozwiązanie Sudoku 4x4 to:")
+for wiersz in tablica4x4:
+    print(wiersz)
+# powinno wyjść:
+# [1, 2, 3, 4]
+# [4, 3, 2, 1]
+# [3, 4, 1, 2]
+# [2, 1, 4, 3]
+
+# funkcja sudoku 9 x 9
 tablica = [
     [0, 0, 0, 8, 0, 0, 0, 0, 9],
     [0, 1, 9, 0, 0, 5, 8, 3, 0],
